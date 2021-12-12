@@ -16,14 +16,13 @@ body {
   padding: 0;
   background-color: white;
   color: white;
-  display: flex;
-  justify-content: center;
 }
 .main {
   min-height: 100vh;
   display: flex;
-
+  justify-content: center;
   align-items: center;
+  margin: 1rem;
 }
 .container {
   max-width: 900px;
@@ -48,8 +47,7 @@ body {
 h1 {
   text-transform: uppercase;
   font-family: "Big Shoulders Display", cursive;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0;
 }
 p {
   font-size: 12px;
@@ -60,43 +58,56 @@ p {
 }
 button {
   padding: 10px 25px;
-  text-align: center;
-  display: inline-block;
   font-size: 13px;
   border: 2px solid white;
   border-radius: 30px;
   font-family: "Lexend Deca", sans-serif;
 }
+
+.b1,
+.b2,
+.b3 {
+  transition: 0.3s;
+}
+
+.b1:hover,
+.b2:hover,
+.b3:hover {
+  cursor: pointer;
+  color: white;
+}
+
 .b1 {
   color: var(--Bright-orange);
-  transition: 0.3s;
 }
 .b2 {
   color: var(--Dark-cyan);
-  transition: 0.3s;
 }
 .b3 {
   color: var(--Very-dark-cyan);
-  transition: 0.3s;
 }
 .b1:hover {
   background-color: var(--Bright-orange);
-  cursor: pointer;
-  color: white;
 }
 .b2:hover {
   background-color: var(--Dark-cyan);
-  cursor: pointer;
-  color: white;
 }
 .b3:hover {
   background-color: var(--Very-dark-cyan);
-  cursor: pointer;
-  color: white;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
   .container {
     max-width: 500px;
     flex-direction: column;
+  }
+
+  .box1 {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+  }
+  .box3 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
   }
 }
